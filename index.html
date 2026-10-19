@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123c35">
+  <title>黔行五日｜贵州亲子旅行攻略</title>
+  <meta name="description" content="2026年11月14日至18日贵州亲子旅行计划：黄果树、织金洞与大峡谷、西江千户苗寨、贵州省博物馆。">
+  <style>
+    :root {
+      --ink: #18332f;
+      --muted: #63746f;
+      --paper: #f8f6ef;
+      --white: #fff;
+      --green: #176b57;
+      --green-2: #299a70;
+      --mint: #dff1e6;
+      --gold: #d99c45;
+      --orange: #ef7f4f;
+      --blue: #3e83a5;
+      --line: rgba(24, 51, 47, .12);
+      --shadow: 0 18px 45px rgba(27, 63, 52, .10);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(215, 235, 224, .75), transparent 30rem),
+        var(--paper);
+      font: 15px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+
+    .hero {
+      position: relative;
+      min-height: 640px;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(145deg, #0b3431 0%, #185f52 54%, #82aa82 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      opacity: .9;
+      background:
+        radial-gradient(circle at 77% 23%, rgba(255,255,255,.18) 0 4%, transparent 4.2%),
+        linear-gradient(160deg, transparent 48%, rgba(7, 39, 36, .34) 48.2% 56%, transparent 56.2%),
+        linear-gradient(150deg, transparent 56%, rgba(8, 51, 45, .54) 56.2% 66%, transparent 66.2%);
+    }
+    .mountains { position: absolute; inset: auto 0 0; height: 47%; opacity: .96; }
+    .topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+    .brand { font-weight: 760; letter-spacing: .14em; }
+    .brand small { display: block; font-size: 10px; font-weight: 500; letter-spacing: .24em; opacity: .68; }
+    .top-actions { display: flex; gap: 10px; }
+    .ghost-btn, .solid-btn {
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: 10px 15px;
+      color: #fff;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      font: inherit;
+    }
+    .solid-btn { border-color: #fff; color: var(--ink); background: #fff; font-weight: 700; }
+    .hero-copy { position: relative; z-index: 2; width: min(670px, 100%); padding: 62px 0 140px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .82; }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+    h1 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(52px, 9vw, 102px); font-weight: 500; line-height: .95; letter-spacing: -.04em; }
+    .hero-sub { max-width: 560px; margin: 26px 0 0; color: rgba(255,255,255,.84); font-size: clamp(16px, 2.2vw, 20px); }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .hero-chip { padding: 8px 13px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; background: rgba(6,35,32,.2); font-size: 13px; }
+
+    .quick-panel {
+      position: relative; z-index: 4;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      margin-top: -64px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,.7); border-radius: var(--radius);
+      background: rgba(255,255,255,.92); box-shadow: var(--shadow); backdrop-filter: blur(18px);
+    }
+    .quick-item { padding: 24px 28px; border-right: 1px solid var(--line); }
+    .quick-item:last-child { border: 0; }
+    .quick-label { margin-bottom: 4px; color: var(--muted); font-size: 12px; letter-spacing: .08em; }
+    .quick-value { font-size: 17px; font-weight: 750; }
+    .quick-note { color: var(--muted); font-size: 12px; }
+
+    section { padding: 82px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+    .section-kicker { color: var(--green-2); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    h2 { margin: 6px 0 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(34px, 5vw, 54px); font-weight: 520; line-height: 1.1; }
+    .section-desc { max-width: 470px; margin: 0; color: var(--muted); }
+
+    .verdict { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; }
+    .verdict-main, .card { border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.84); box-shadow: 0 12px 35px rgba(30,63,54,.06); }
+    .verdict-main { padding: 32px; }
+    .verdict-title { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-size: 22px; font-weight: 800; }
+    .icon-bubble { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 16px; background: var(--mint); font-size: 22px; }
+    .route-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 20px 0; }
+    .route-pills span { padding: 7px 11px; border-radius: 10px; background: #f0f4ef; font-weight: 700; }
+    .route-pills i { color: var(--green-2); font-style: normal; }
+    .note { padding: 14px 16px; border-left: 3px solid var(--gold); border-radius: 0 12px 12px 0; color: #5e533e; background: #fff6e6; }
+    .transport-grid { display: grid; gap: 12px; }
+    .transport-item { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 18px 20px; }
+    .transport-item strong { display: block; }
+    .transport-item small { color: var(--muted); }
+    .tag { padding: 5px 9px; border-radius: 999px; color: var(--green); background: var(--mint); font-size: 12px; font-weight: 800; white-space: nowrap; }
+
+    .transit-plan { margin-top: 24px; padding: 30px; }
+    .transit-plan h3 { margin: 0 0 8px; font-size: 24px; }
+    .transit-intro { margin: 0 0 24px; color: var(--muted); }
+    .transit-days { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .transit-day { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: #fbfcf9; }
+    .transit-day-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+    .transit-day-top strong { font-size: 17px; }
+    .transit-route { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 13px 0; font-size: 13px; }
+    .transit-route span { padding: 5px 8px; border-radius: 8px; background: var(--mint); }
+    .transit-route i { color: var(--muted); font-style: normal; }
+    .transit-day p { margin: 0; color: var(--muted); font-size: 13px; }
+    .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .compare-option { padding: 20px; border-radius: 16px; background: #f0f4ef; }
+    .compare-option.recommended { color: #fff; background: var(--green); }
+    .compare-option b { display: block; font-size: 18px; }
+    .compare-option span { display: block; margin-top: 5px; opacity: .75; font-size: 13px; }
+
+    .tabs { display: flex; gap: 9px; margin-bottom: 28px; overflow-x: auto; scrollbar-width: none; }
+    .tab { flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; color: var(--muted); background: transparent; cursor: pointer; font: inherit; font-weight: 700; }
+    .tab.active { border-color: var(--green); color: #fff; background: var(--green); }
+    .day-card { display: none; grid-template-columns: 35% 1fr; overflow: hidden; }
+    .day-card.active { display: grid; }
+    .day-visual { position: relative; min-height: 560px; overflow: hidden; color: #fff; background: #1d6253; }
+    .day-visual svg { position: absolute; width: 100%; height: 100%; inset: 0; }
+    .visual-label { position: absolute; inset: 30px 30px auto; z-index: 2; }
+    .day-number { font: 72px/.9 Georgia, serif; opacity: .26; }
+    .visual-label strong { display: block; margin-top: 6px; font: 30px/1.2 Georgia, "Songti SC", serif; }
+    .distance { position: absolute; z-index: 2; inset: auto 30px 28px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.24); border-radius: 14px; background: rgba(0,0,0,.15); backdrop-filter: blur(9px); font-size: 13px; }
+    .day-content { padding: 34px 38px; }
+    .day-title { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .day-title h3 { margin: 0; font-size: 25px; }
+    .day-title span { color: var(--muted); }
+    .timeline { margin: 26px 0 0; padding: 0; list-style: none; }
+    .timeline li { position: relative; display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 0 0 23px 22px; }
+    .timeline li::before { content: ""; position: absolute; left: 3px; top: 8px; bottom: -8px; width: 1px; background: #ccdad5; }
+    .timeline li:last-child::before { display: none; }
+    .timeline li::after { content: ""; position: absolute; left: -1px; top: 7px; width: 7px; height: 7px; border: 2px solid #fff; border-radius: 50%; background: var(--green-2); box-shadow: 0 0 0 2px var(--green-2); }
+    .time { color: var(--green); font-weight: 850; }
+    .event strong { display: block; }
+    .event small { display: block; margin-top: 3px; color: var(--muted); }
+    .day-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 2px; }
+    .mini-note { padding: 14px; border-radius: 14px; background: #f0f4ef; }
+    .mini-note b { display: block; margin-bottom: 3px; }
+    .mini-note span { color: var(--muted); font-size: 13px; }
+
+    .food-section { color: #f9f6ea; background: #163c36; }
+    .food-section .section-kicker { color: #78d2a9; }
+    .food-section .section-desc { color: rgba(255,255,255,.62); }
+    .food-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .food-card { position: relative; min-height: 300px; overflow: hidden; border-radius: 22px; background: #245248; }
+    .food-art { height: 165px; position: relative; overflow: hidden; background: linear-gradient(140deg, #d8a85e, #a84d32); }
+    .food-art::before { content: ""; position: absolute; width: 140px; height: 140px; left: calc(50% - 70px); top: 34px; border-radius: 50%; background: #f7ead5; box-shadow: inset 0 0 0 12px rgba(255,255,255,.42), 0 13px 25px rgba(0,0,0,.18); }
+    .food-art::after { content: ""; position: absolute; width: 85px; height: 35px; left: calc(50% - 42px); top: 78px; border-radius: 50%; border: 6px double rgba(95,51,24,.66); transform: rotate(-8deg); }
+    .food-card:nth-child(2) .food-art { background: linear-gradient(145deg, #6e8f54, #d5a64c); }
+    .food-card:nth-child(3) .food-art { background: linear-gradient(145deg, #bd6640, #69352f); }
+    .food-card:nth-child(4) .food-art { background: linear-gradient(145deg, #537766, #b9a76c); }
+    .food-copy { padding: 20px; }
+    .food-copy h3 { margin: 0 0 6px; font-size: 19px; }
+    .food-copy p { margin: 0; color: rgba(255,255,255,.62); font-size: 13px; }
+    .spice { position: absolute; top: 14px; right: 14px; z-index: 2; padding: 5px 8px; border-radius: 99px; background: rgba(13,35,31,.65); font-size: 11px; backdrop-filter: blur(6px); }
+
+    .prep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .prep-card { padding: 28px; }
+    .prep-card h3 { margin: 0 0 18px; font-size: 21px; }
+    .checklist { display: grid; gap: 11px; }
+    .check-row { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed var(--line); cursor: pointer; }
+    .check-row:last-child { border: 0; }
+    .check-row input { position: absolute; opacity: 0; }
+    .fake-check { flex: 0 0 20px; width: 20px; height: 20px; margin-top: 2px; border: 1.5px solid #aebdb7; border-radius: 6px; }
+    .check-row input:checked + .fake-check { border-color: var(--green-2); background: var(--green-2); box-shadow: inset 0 0 0 4px #fff; }
+    .check-row input:checked ~ span:last-child { color: #8a9894; text-decoration: line-through; }
+    .budget-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .budget-row small { grid-column: 1 / -1; color: var(--muted); }
+    .budget-total { display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--ink); }
+    .budget-total strong { color: var(--green); font-size: 25px; }
+
+    .flight-card { display: grid; grid-template-columns: 1fr auto 1fr; gap: 25px; align-items: center; padding: 28px; margin-top: 20px; }
+    .flight-city:last-child { text-align: right; }
+    .flight-code { font: 38px/1 Georgia, serif; }
+    .flight-time { margin-top: 6px; font-size: 18px; font-weight: 800; }
+    .flight-line { min-width: 160px; text-align: center; color: var(--muted); font-size: 12px; }
+    .flight-line i { display: block; position: relative; height: 1px; margin: 10px 0; background: #b8c4c0; }
+    .flight-line i::after { content: "✈"; position: absolute; right: 45%; top: -13px; color: var(--green); font-style: normal; font-size: 18px; background: #fff; padding: 0 7px; }
+
+    footer { padding: 38px 0 54px; color: var(--muted); text-align: center; font-size: 13px; }
+    .fab { position: fixed; z-index: 20; right: 22px; bottom: 22px; display: none; width: 48px; height: 48px; border: 0; border-radius: 50%; color: #fff; background: var(--green); box-shadow: 0 8px 22px rgba(23,107,87,.3); cursor: pointer; }
+
+    @media (max-width: 850px) {
+      .hero { min-height: 600px; }
+      .quick-panel { grid-template-columns: 1fr 1fr; }
+      .quick-item:nth-child(2) { border-right: 0; }
+      .quick-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .verdict, .prep-grid { grid-template-columns: 1fr; }
+      .transit-days { grid-template-columns: 1fr; }
+      .day-card { grid-template-columns: 1fr; }
+      .day-visual { min-height: 320px; }
+      .food-grid { grid-template-columns: 1fr 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      .topbar { padding-top: 16px; }
+      .top-actions .ghost-btn { display: none; }
+      .hero-copy { padding-top: 72px; }
+      .quick-panel { margin-top: -45px; }
+      .quick-item { padding: 17px 15px; }
+      .quick-value { font-size: 14px; }
+      section { padding: 64px 0; }
+      .verdict-main { padding: 24px; }
+      .transit-plan { padding: 22px; }
+      .compare-box { grid-template-columns: 1fr; }
+      .day-content { padding: 26px 20px; }
+      .timeline li { grid-template-columns: 54px 1fr; gap: 10px; padding-left: 18px; }
+      .day-bottom, .food-grid { grid-template-columns: 1fr; }
+      .food-card { min-height: 245px; }
+      .food-art { height: 130px; }
+      .flight-card { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .flight-line { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+      .fab { display: grid; place-items: center; }
+    }
+    @media print {
+      .hero { min-height: 420px; }
+      .top-actions, .tabs, .fab { display: none !important; }
+      .quick-panel { margin-top: -35px; }
+      section { padding: 35px 0; break-inside: avoid; }
+      .day-card { display: grid !important; margin-bottom: 24px; break-inside: avoid; }
+      .day-visual { min-height: 400px; }
+      .food-section { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .food-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap topbar">
+      <div class="brand">黔行小记<small>GUIZHOU · FAMILY JOURNEY</small></div>
+      <div class="top-actions">
+        <button class="ghost-btn" onclick="document.querySelector('#plan').scrollIntoView()">查看行程</button>
+        <button class="solid-btn" onclick="window.print()">打印 / 存 PDF</button>
+      </div>
+    </div>
+    <div class="wrap hero-copy">
+      <div class="eyebrow">2026.11.14 — 11.18 · 亲子五日</div>
+      <h1>去贵州，<br>看山与水。</h1>
+      <p class="hero-sub">上海出发，以贵阳为中心轻装往返。把黄果树、织金双景与苗寨装进五天，也把晚饭、休息和小朋友的作业时间认真留出来。</p>
+      <div class="hero-chips">
+        <span class="hero-chip">3 个核心自然景区</span>
+        <span class="hero-chip">1 个苗寨人文日</span>
+        <span class="hero-chip">每日作业时间</span>
+        <span class="hero-chip">不搬酒店</span>
+      </div>
+    </div>
+    <svg class="mountains" viewBox="0 0 1440 430" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#245d50" d="M0 350L185 168l118 97L468 76l177 197 106-91 137 105 170-190 164 160 218-106v279H0z"/>
+      <path fill="#173f39" d="M0 396l228-124 123 66 189-154 183 174 150-105 167 99 154-153 246 135v96H0z"/>
+      <path fill="#0e2f2c" d="M0 420l270-58 181 44 212-100 185 87 164-61 181 70 247-86v114H0z"/>
+      <path fill="none" stroke="rgba(255,255,255,.32)" stroke-width="3" d="M1055 25v215c0 52-31 73-31 127"/>
+      <path fill="none" stroke="rgba(255,255,255,.16)" stroke-width="12" d="M1078 35v204c0 54-37 80-37 134"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="wrap quick-panel" aria-label="行程摘要">
+      <div class="quick-item"><div class="quick-label">去程</div><div class="quick-value">CZ6352 · 19:30</div><div class="quick-note">浦东 T2 → 贵阳 T3</div></div>
+      <div class="quick-item"><div class="quick-label">返程</div><div class="quick-value">CZ6351 · 15:55</div><div class="quick-note">贵阳 T3 → 浦东 T2</div></div>
+      <div class="quick-item"><div class="quick-label">住宿 · 已在线付 ¥1414</div><div class="quick-value">贵阳智选假日酒店</div><div class="quick-note">喷水池甲秀楼店 · 预计连住 4 晚</div></div>
+      <div class="quick-item"><div class="quick-label">节奏</div><div class="quick-value">3 天游览 + 半日博物馆</div><div class="quick-note">每晚约 1.5 小时作业</div></div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">The smart route</div><h2>¥2500 三天包车，价格合理</h2></div>
+          <p class="section-desc">若是独立用车并包含高速、停车费，平均约 ¥833/天并不贵。公共交通可以省几百元，但每天要多次换乘，并受返程车次约束。</p>
+        </div>
+        <div class="verdict">
+          <div class="verdict-main">
+            <div class="verdict-title"><span class="icon-bubble">🚙</span><span>省时省力首选：保留三天包车</span></div>
+            <p>11 月 15—17 日连续使用同一位司机，贵阳酒店门到门。尤其织金洞与大峡谷之间仍需车辆接驳，公共交通并不能完全替代用车。</p>
+            <div class="route-pills"><span>贵阳</span><i>→</i><span>黄果树</span><i>→</i><span>织金</span><i>→</i><span>西江</span></div>
+            <div class="note"><b>下单前确认：</b> ¥2500 是否为独立 5 座车，是否包含高速费、停车费、司机餐补与每日超时费；明确不进购物点。全部包含就值得订。</div>
+          </div>
+          <div class="transport-grid">
+            <div class="card transport-item"><span class="icon-bubble">🛬</span><div><strong>机场往返</strong><small>落地夜间网约车；返程日半日包车</small></div><span class="tag">省心</span></div>
+            <div class="card transport-item"><span class="icon-bubble">🏞️</span><div><strong>3 个远郊日</strong><small>5 座车约 ¥700—1300/天</small></div><span class="tag">包车</span></div>
+            <div class="card transport-item"><span class="icon-bubble">🥢</span><div><strong>贵阳市内</strong><small>步行 + 网约车，拥堵时切地铁</small></div><span class="tag">灵活</span></div>
+            <div class="card transport-item"><span class="icon-bubble">🧒</span><div><strong>带娃细节</strong><small>安全座椅、晕车袋、靠枕提前说</small></div><span class="tag">必确认</span></div>
+          </div>
+        </div>
+
+        <div class="card transit-plan">
+          <h3>如果选择“城际火车 + 当地打车”</h3>
+          <p class="transit-intro">下面按酒店往返、2 大 1 小估算。儿童铁路票价取决于年龄，且 2026 年 11 月的具体车次尚未开售，因此先按路线规划，出发前再用 12306 校准班次。</p>
+          <div class="transit-days">
+            <article class="transit-day">
+              <div class="transit-day-top"><strong>黄果树 · 可行</strong><span class="tag">约 ¥450—650</span></div>
+              <div class="transit-route"><span>酒店打车</span><i>→</i><span>贵阳北站</span><i>→</i><span>安顺西站</span><i>→</i><span>景区打车</span></div>
+              <p>高铁约 30—40 分钟，安顺西到游客中心约 45—60 分钟。建议买 07:30 左右去程、18:00 后返程；总换乘约 6 次，回程必须卡点。</p>
+            </article>
+            <article class="transit-day">
+              <div class="transit-day-top"><strong>织金双景 · 不推荐</strong><span class="tag">约 ¥500—750</span></div>
+              <div class="transit-route"><span>贵阳北</span><i>→</i><span>织金站</span><i>→</i><span>当地包半天车</span></div>
+              <p>直达列车班次通常不如安顺、凯里密集；织金站、织金洞和大峡谷间仍要约车并等候。若返程班次不匹配，当天游览会被明显压缩。</p>
+            </article>
+            <article class="transit-day">
+              <div class="transit-day-top"><strong>西江苗寨 · 最适合</strong><span class="tag">约 ¥500—700</span></div>
+              <div class="transit-route"><span>贵阳北站</span><i>→</i><span>凯里南站</span><i>→</i><span>苗寨打车</span></div>
+              <p>高铁约 35—45 分钟，凯里南到苗寨约 50—70 分钟。去程选 07:30 前后，16:00 离寨，预留堵车和进站时间。</p>
+            </article>
+          </div>
+          <div class="compare-box">
+            <div class="compare-option"><b>全公共交通：约 ¥1,450—2,100</b><span>理论上比包车省约 ¥400—1,050；但需 6 段城际火车、至少 12 次打车/换乘，织金还要预约当地车。</span></div>
+            <div class="compare-option recommended"><b>建议：¥2500 三天包车</b><span>多付的部分主要买门到门、行程弹性、车内休息和每天准时回酒店写作业。带孩子时性价比更高。</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" style="padding-top: 20px">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-kicker">Day by day</div><h2>五天，不赶场的安排</h2></div>
+          <p class="section-desc">点击日期切换。景区日把最费体力的部分放在上午，下午留弹性；若天气不佳，黄果树与织金两日可互换。</p>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-day="1">11/14 · 抵达</button>
+          <button class="tab" data-day="2">11/15 · 黄果树</button>
+          <button class="tab" data-day="3">11/16 · 织金</button>
+          <button class="tab" data-day="4">11/17 · 苗寨</button>
+          <button class="tab" data-day="5">11/18 · 博物馆</button>
+        </div>
+
+        <article class="card day-card active" data-panel="1">
+          <div class="day-visual">
+            <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#102f41"/><stop offset="1" stop-color="#326c63"/></linearGradient></defs><rect width="500" height="600" fill="url(#night)"/><circle cx="380" cy="100" r="45" fill="#f5e7b3" opacity=".88"/><g fill="#183a40"><path d="M0 470h500v130H0z"/><path d="M30 470V290h80v180zm112 0V350h95v120zm125 0V250h88v220zm118 0V330h90v140z"/></g><g fill="#f2c866" opacity=".8"><path d="M48 320h13v13H48zm28 0h13v13H76zm86 55h13v13h-13zm31 0h13v13h-13zm96-89h13v13h-13zm29 0h13v13h-13zm88 73h13v13h-13z"/></g><path d="M-20 520c130-60 215-8 300-58s145-29 240-5v143H-20z" fill="#0c292b"/></svg>
+            <div class="visual-label"><div class="day-number">01</div><strong>晚抵贵阳</strong></div><div class="distance">机场 → 酒店 · 约 30—45 分钟</div>
+          </div>
+          <div class="day-content">
+            <div class="day-title"><h3>只做一件事：好好入住</h3><span>周六 · 不安排夜宵打卡</span></div>
+            <ol class="timeline">
+              <li><span class="time">19:30</span><div class="event"><strong>上海浦东 T2 起飞</strong><small>南方航空 CZ6352；建议 17:30 前到机场。</small></div></li>
+              <li><span class="time">22:30</span><div class="event"><strong>抵达贵阳龙洞堡 T3</strong><small>落地后直接网约车，不再换地铁；把酒店中文全名发给司机。</small></div></li>
+              <li><span class="time">23:30</span><div class="event"><strong>酒店入住、洗漱睡觉</strong><small>请前台协助次日早餐打包；确认包车司机 06:40 到达。</small></div></li>
+            </ol>
+            <div class="day-bottom"><div class="mini-note"><b>今晚不写作业</b><span>飞行日以睡眠为先，作业在出发前完成。</span></div><div class="mini-note"><b>提前备好</b><span>面包、牛奶与水果，次日车上补早餐。</span></div></div>
+          </div>
+        </article>
+
+        <article class="card day-card" data-panel="2">
+          <div class="day-visual">
+            <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="falls" x2="0" y2="1"><stop stop-color="#9fc7b0"/><stop offset="1" stop-color="#164f46"/></linearGradient></defs><rect width="500" height="600" fill="url(#falls)"/><path d="M0 180l80-65 95 40 70-92 120 93 135-71v515H0z" fill="#2d6f57"/><path d="M0 245l105-85 90 72 105-97 92 65 108-58v458H0z" fill="#174e43"/><path d="M180 125h151l-18 131-15 61-8 114-52 90-50-112 16-100z" fill="#e9f3e9" opacity=".95"/><path d="M216 148h72l-15 124 4 69-28 90-24-102 11-92z" fill="#b8ded6"/><path d="M0 500c129-54 201-7 291-55s142-15 209-17v172H0z" fill="#0c382f"/></svg>
+            <div class="visual-label"><div class="day-number">02</div><strong>黄果树瀑布</strong></div><div class="distance">单程约 2 小时 · 今日步行约 12,000—18,000 步</div>
+          </div>
+          <div class="day-content">
+            <div class="day-title"><h3>三景区择重点，不追求全刷</h3><span>周日 · 强度 ★★★★☆</span></div>
+            <ol class="timeline">
+              <li><span class="time">06:40</span><div class="event"><strong>酒店出发</strong><small>车上补早餐，争取在旅行团前抵达。</small></div></li>
+              <li><span class="time">09:00</span><div class="event"><strong>大瀑布景区</strong><small>先看主瀑布；水帘洞开放且不排长队再进。台阶湿滑，给孩子穿防滑鞋。</small></div></li>
+              <li><span class="time">12:00</span><div class="event"><strong>景区简餐</strong><small>不要为网红店绕路，清淡热食优先。</small></div></li>
+              <li><span class="time">13:00</span><div class="event"><strong>天星桥下半程</strong><small>体力一般就走银坠链瀑布精华段；不建议带娃硬走全程。</small></div></li>
+              <li><span class="time">16:00</span><div class="event"><strong>陡坡塘（视体力）</strong><small>若孩子累或下雨，直接取消，提前回贵阳。</small></div></li>
+              <li><span class="time">19:00</span><div class="event"><strong>酒店附近晚餐</strong><small>20:00—21:30 固定作业；21:45 洗漱休息。</small></div></li>
+            </ol>
+            <div class="day-bottom"><div class="mini-note"><b>随身带</b><span>轻便雨衣、防水鞋套、替换袜、能量棒。</span></div><div class="mini-note"><b>机动原则</b><span>大瀑布必去，天星桥次之，陡坡塘可舍。</span></div></div>
+          </div>
+        </article>
+
+        <article class="card day-card" data-panel="3">
+          <div class="day-visual">
+            <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="cave"><stop stop-color="#a56f45"/><stop offset=".48" stop-color="#493c3b"/><stop offset="1" stop-color="#111f22"/></radialGradient></defs><rect width="500" height="600" fill="url(#cave)"/><path d="M20 0l67 212 50-77 43 245 61-286 58 250 72-232 55 118L488 0z" fill="#16272a"/><path d="M65 600l55-180 47 92 58-239 63 228 58-154 64 253z" fill="#1c2c2e"/><g fill="none" stroke-linecap="round"><path d="M60 480Q220 320 420 430" stroke="#dca159" stroke-width="9"/><path d="M90 500Q240 355 440 460" stroke="#4f9f92" stroke-width="5"/></g><circle cx="240" cy="350" r="110" fill="#c38048" opacity=".12"/></svg>
+            <div class="visual-label"><div class="day-number">03</div><strong>织金洞<br>与大峡谷</strong></div><div class="distance">两景相邻 · 洞内约 10—16℃，以当天为准</div>
+          </div>
+          <div class="day-content">
+            <div class="day-title"><h3>溶洞为主，大峡谷量力而行</h3><span>周一 · 强度 ★★★★☆</span></div>
+            <ol class="timeline">
+              <li><span class="time">07:00</span><div class="event"><strong>包车出发去织金</strong><small>约 2—2.5 小时；山路多，容易晕车就坐前排并少看屏幕。</small></div></li>
+              <li><span class="time">09:30</span><div class="event"><strong>织金洞</strong><small>跟随讲解慢慢走，重点看霸王盔、银雨树、卷曲石；洞内台阶多且湿冷。</small></div></li>
+              <li><span class="time">12:30</span><div class="event"><strong>景区外午餐</strong><small>点织金荞凉粉、宫保鸡丁，孩子选择不辣版本。</small></div></li>
+              <li><span class="time">13:30</span><div class="event"><strong>织金大峡谷</strong><small>走精华线路；出发前确认电梯、观光车与步道当日开放情况。</small></div></li>
+              <li><span class="time">16:00</span><div class="event"><strong>返程贵阳</strong><small>预留山区路况弹性，不在织金吃晚饭。</small></div></li>
+              <li><span class="time">18:30</span><div class="event"><strong>晚餐 + 作业</strong><small>19:30—21:00 作业；今晚尽量早睡。</small></div></li>
+            </ol>
+            <div class="day-bottom"><div class="mini-note"><b>穿衣建议</b><span>速干内层 + 薄羽绒/抓绒，别只披景区外套。</span></div><div class="mini-note"><b>退路</b><span>若洞内已疲惫，大峡谷缩短或取消，不硬撑。</span></div></div>
+          </div>
+        </article>
+
+        <article class="card day-card" data-panel="4">
+          <div class="day-visual">
+            <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="village" x2="0" y2="1"><stop stop-color="#bbd7cf"/><stop offset="1" stop-color="#315e52"/></linearGradient></defs><rect width="500" height="600" fill="url(#village)"/><path d="M0 260L100 150l73 71 92-130 83 110 72-62 80 82v379H0z" fill="#577d69"/><path d="M0 356l106-63 78 39 77-83 88 67 78-44 73 37v291H0z" fill="#2b5549"/><g fill="#342d28"><path d="M80 410h120v75H80z"/><path d="M63 410l78-54 79 54z"/><path d="M265 360h142v88H265z"/><path d="M244 361l92-64 93 64z"/></g><g fill="#d7b75d"><rect x="102" y="434" width="18" height="25"/><rect x="150" y="434" width="18" height="25"/><rect x="296" y="390" width="19" height="27"/><rect x="354" y="390" width="19" height="27"/></g><path d="M0 517q112-53 233 5t267-16v94H0z" fill="#173b37"/></svg>
+            <div class="visual-label"><div class="day-number">04</div><strong>西江千户苗寨</strong></div><div class="distance">单程约 2.5—3 小时 · 放弃夜景换作业与睡眠</div>
+          </div>
+          <div class="day-content">
+            <div class="day-title"><h3>看清晨与白天，不熬夜等灯</h3><span>周二 · 强度 ★★★☆☆</span></div>
+            <ol class="timeline">
+              <li><span class="time">07:00</span><div class="event"><strong>贵阳出发</strong><small>早高峰前离城；车上准备口袋早餐。</small></div></li>
+              <li><span class="time">10:00</span><div class="event"><strong>入寨、观景台</strong><small>先坐观光车登高看全景，再慢慢往下走，避开反向爬坡。</small></div></li>
+              <li><span class="time">11:30</span><div class="event"><strong>午餐：酸汤鱼</strong><small>提前说“微酸、辣椒另放”；不点超大锅，留胃给小吃。</small></div></li>
+              <li><span class="time">13:00</span><div class="event"><strong>寨内慢逛</strong><small>风雨桥、古街、稻田区；商业街少停留，把时间留给安静巷道。</small></div></li>
+              <li><span class="time">16:00</span><div class="event"><strong>准时返程</strong><small>不等夜景；夜景代价是约 23:00 后回酒店，不符合本次亲子节奏。</small></div></li>
+              <li><span class="time">19:15</span><div class="event"><strong>回贵阳简单吃</strong><small>20:00—21:30 作业；整理行李，为次日退房。</small></div></li>
+            </ol>
+            <div class="day-bottom"><div class="mini-note"><b>消费提示</b><span>银饰按预算买，旅拍不临时冲动下单。</span></div><div class="mini-note"><b>替代方案</b><span>若连日疲劳，改青岩古镇半日 + 市区休息。</span></div></div>
+          </div>
+        </article>
+
+        <article class="card day-card" data-panel="5">
+          <div class="day-visual">
+            <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="museum" x2="0" y2="1"><stop stop-color="#dce4dc"/><stop offset="1" stop-color="#79998d"/></linearGradient></defs><rect width="500" height="600" fill="url(#museum)"/><circle cx="390" cy="105" r="60" fill="#f4d48f" opacity=".6"/><path d="M44 250h412v260H44z" fill="#eee9de"/><path d="M44 250l130-70h282v70z" fill="#b7c4ba"/><path d="M90 305h75v120H90zm122 0h75v120h-75zm122 0h75v120h-75z" fill="#547469"/><path d="M0 510h500v90H0z" fill="#294d45"/><path d="M50 530q150-60 400 0" fill="none" stroke="#779987" stroke-width="25"/></svg>
+            <div class="visual-label"><div class="day-number">05</div><strong>贵州省博物馆</strong></div><div class="distance">行李随车 · 12:30 前必须向机场出发</div>
+          </div>
+          <div class="day-content">
+            <div class="day-title"><h3>博物馆收尾，直接去机场</h3><span>周三 · 返程日</span></div>
+            <ol class="timeline">
+              <li><span class="time">07:30</span><div class="event"><strong>早餐、退房</strong><small>行李直接放进预约车辆，不再返回酒店。</small></div></li>
+              <li><span class="time">08:20</span><div class="event"><strong>前往贵州省博物馆</strong><small>预约 09:00 首场；开馆与预约规则以出行前官方通知为准。</small></div></li>
+              <li><span class="time">09:00</span><div class="event"><strong>重点看民族贵州</strong><small>苗族服饰、银饰与历史展优先，控制在 2.5—3 小时。</small></div></li>
+              <li><span class="time">11:40</span><div class="event"><strong>附近快速午餐</strong><small>不排队、不去远处；12:25 前上车。</small></div></li>
+              <li><span class="time">13:20</span><div class="event"><strong>抵达贵阳龙洞堡 T3</strong><small>为 15:55 航班保留 2 小时以上值机与安检时间。</small></div></li>
+              <li><span class="time">15:55</span><div class="event"><strong>CZ6351 返回上海</strong><small>预计 18:25 抵达浦东 T2。</small></div></li>
+            </ol>
+            <div class="day-bottom"><div class="mini-note"><b>关键点</b><span>返程日司机全程等候，行李不要寄存在酒店。</span></div><div class="mini-note"><b>兜底</b><span>若博物馆闭馆/约满，改观山湖公园后直接机场。</span></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="food-section">
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-kicker">Eat in Guizhou</div><h2>把胃口留给贵州</h2></div><p class="section-desc">酒店位于喷水池—甲秀楼一带，晚餐尽量选步行或短途打车可达。不要每天都吃重辣，远郊日尤其要照顾肠胃。</p></div>
+        <div class="food-grid">
+          <article class="food-card"><span class="spice">可做不辣</span><div class="food-art"></div><div class="food-copy"><h3>丝娃娃</h3><p>蔬菜清爽、适合孩子。蘸水单放，第一晚或最后一天吃都合适。</p></div></article>
+          <article class="food-card"><span class="spice">酸辣分开</span><div class="food-art"></div><div class="food-copy"><h3>酸汤鱼</h3><p>苗寨安排一顿即可；先确认鱼重与锅底辣度，避免过量。</p></div></article>
+          <article class="food-card"><span class="spice">微辣</span><div class="food-art"></div><div class="food-copy"><h3>肠旺面 / 牛肉粉</h3><p>早餐优先牛肉粉；肠旺面油辣较重，孩子可换清汤粉。</p></div></article>
+          <article class="food-card"><span class="spice">辣椒另放</span><div class="food-art"></div><div class="food-copy"><h3>烙锅与小吃</h3><p>洋芋粑、豆腐圆子、恋爱豆腐果少量多样，别在景区日吃太撑。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div><div class="section-kicker">Before you go</div><h2>出发前，把这些勾掉</h2></div><p class="section-desc">勾选状态会保存在本机浏览器。门票、开放时间与交通价格可能调整，最终以出发前官方平台为准。</p></div>
+        <div class="prep-grid">
+          <div class="card prep-card">
+            <h3>预约清单</h3>
+            <div class="checklist" id="checklist">
+              <label class="check-row"><input type="checkbox" data-key="driver"><span class="fake-check"></span><span>预约 11/15—18 包车；确认儿童座椅、费用所含项目及取消规则</span></label>
+              <label class="check-row"><input type="checkbox" data-key="hotel"><span class="fake-check"></span><span>向酒店确认 11/14 深夜入住、入住人姓名、早餐与连续住宿日期</span></label>
+              <label class="check-row"><input type="checkbox" data-key="waterfall"><span class="fake-check"></span><span>购买黄果树门票及观光车，留意水帘洞分时预约</span></label>
+              <label class="check-row"><input type="checkbox" data-key="zhijin"><span class="fake-check"></span><span>确认织金洞 + 大峡谷联票、接驳及大峡谷开放状态</span></label>
+              <label class="check-row"><input type="checkbox" data-key="miao"><span class="fake-check"></span><span>购买西江千户苗寨门票与观光车票</span></label>
+              <label class="check-row"><input type="checkbox" data-key="museum"><span class="fake-check"></span><span>按官方开放预约时间预约 11/18 贵州省博物馆首场</span></label>
+              <label class="check-row"><input type="checkbox" data-key="weather"><span class="fake-check"></span><span>出发前 3 天看天气；黄果树和织金日可对调</span></label>
+              <label class="check-row"><input type="checkbox" data-key="homework"><span class="fake-check"></span><span>作业按天分装，带平板/书本、充电器和便携台灯</span></label>
+            </div>
+          </div>
+          <div class="card prep-card">
+            <h3>交通预算参考 · 一车</h3>
+            <div class="budget-row"><span>机场 → 酒店夜间网约车</span><b>¥70—110</b><small>受夜间费、车型和实时路况影响</small></div>
+            <div class="budget-row"><span>黄果树 + 织金 + 西江三天</span><b>携程报价 ¥2500</b><small>下单前确认独立用车及高速费、停车费、司机餐补、超时费</small></div>
+            <div class="budget-row"><span>博物馆 → 机场半日车</span><b>¥300—500</b><small>含等候与行李保管更安心</small></div>
+            <div class="budget-total"><span>交通预留</span><strong>约 ¥2,870—3,110</strong></div>
+            <p class="note" style="margin-bottom:0">下单前书面确认是否含高速费、停车费、司机餐补与超时费；不接受临时推荐购物点。</p>
+          </div>
+        </div>
+
+        <div class="flight-card card">
+          <div class="flight-city"><div class="flight-code">PVG</div><div class="flight-time">11/14 · 19:30</div><small>上海浦东 T2</small></div>
+          <div class="flight-line">CZ6352 · 3h 00m<i></i>11/18 CZ6351 返程</div>
+          <div class="flight-city"><div class="flight-code">KWE</div><div class="flight-time">22:30 抵达</div><small>贵阳龙洞堡 T3</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">黔行五日 · 为本次家庭旅行定制<br>页面中的用时、票务和预算为规划参考，请以 2026 年 11 月出行时的官方信息与实时路况为准。</footer>
+  <button class="fab" aria-label="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.day-card');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(item => item.classList.remove('active'));
+      panels.forEach(item => item.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`[data-panel="${tab.dataset.day}"]`).classList.add('active');
+    }));
+
+    document.querySelectorAll('#checklist input').forEach(input => {
+      const key = `guizhou-${input.dataset.key}`;
+      input.checked = localStorage.getItem(key) === '1';
+      input.addEventListener('change', () => localStorage.setItem(key, input.checked ? '1' : '0'));
+    });
+  </script>
+</body>
+</html>
